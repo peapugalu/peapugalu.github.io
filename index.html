@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pea Pugalu - Komunitas Sejarah Luwu</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
 
-    <header>
+    <!-- Landing Page (Hero Section) -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-down">Pea Pugalu</h1>
+            <p data-aos="fade-up">Menjaga dan Melestarikan Sejarah Luwu</p>
+            <a href="#about" class="btn">Gabung Sekarang</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Navbar -->
+    <header id="navbar">
         <h1>Pea Pugalu</h1>
         <nav>
             <ul>
@@ -22,17 +35,12 @@
         <button id="toggleDarkMode">🌙 Mode Gelap</button>
     </header>
 
-    <section id="home">
-        <h2>Selamat Datang di Pea Pugalu</h2>
-        <p>Komunitas yang menjaga dan melestarikan sejarah Luwu.</p>
-    </section>
-
-    <section id="about">
+    <section id="about" data-aos="fade-right">
         <h2>Tentang Kami</h2>
         <p>Pea Pugalu adalah komunitas yang berdedikasi untuk mendokumentasikan sejarah dan budaya Luwu.</p>
     </section>
 
-    <section id="events">
+    <section id="events" data-aos="fade-left">
         <h2>Acara Mendatang</h2>
         <ul>
             <li>📜 Seminar Sejarah Luwu - 10 April 2025</li>
@@ -40,9 +48,33 @@
         </ul>
     </section>
 
-    <section id="upload">
+    <section id="upload" data-aos="zoom-in">
         <h2>Upload Artikel</h2>
         <form id="articleForm">
             <input type="text" id="title" placeholder="Judul Artikel" required><br>
             <textarea id="content" placeholder="Isi Artikel" required></textarea><br>
-            <input type
+            <input type="file" id="imageUpload" accept="image/*"><br>
+            <button type="submit">Unggah</button>
+        </form>
+    </section>
+
+    <section id="articles" data-aos="fade-up">
+        <h2>Artikel Terbaru</h2>
+        <div id="articleList"></div>
+    </section>
+
+    <section id="contact" data-aos="fade-down">
+        <h2>Hubungi Kami</h2>
+        <p>Email: peapugalu7@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pea Pugalu. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
