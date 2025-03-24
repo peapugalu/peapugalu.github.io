@@ -5,76 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pea Pugalu - Komunitas Sejarah Luwu</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
 
-    <!-- Landing Page (Hero Section) -->
+    <div id="loader">🔄 Memuat...</div>
+
+    <header id="navbar">
+        <h1>Pea Pugalu</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#events">Acara</a></li>
+                <li><a href="#upload">Artikel</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+        <button id="toggleDarkMode">🌙</button>
+    </header>
+
     <section id="hero">
         <div class="hero-content">
-            <h1 data-aos="fade-down">Pea Pugalu</h1>
-            <p data-aos="fade-up">Menjaga dan Melestarikan Sejarah Luwu</p>
+            <h1>Pea Pugalu</h1>
+            <p>Menjaga dan Melestarikan Sejarah Luwu</p>
             <a href="#about" class="btn">Gabung Sekarang</a>
         </div>
         <div class="hero-overlay"></div>
     </section>
 
-    <!-- Navbar -->
-    <header id="navbar">
-        <h1>Pea Pugalu</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#events">Acara</a></li>
-                <li><a href="#upload">Upload Artikel</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-        </nav>
-        <button id="toggleDarkMode">🌙 Mode Gelap</button>
-    </header>
-
-    <section id="about" data-aos="fade-right">
+    <section id="about">
         <h2>Tentang Kami</h2>
-        <p>Pea Pugalu adalah komunitas yang berdedikasi untuk mendokumentasikan sejarah dan budaya Luwu.</p>
+        <p>Pea Pugalu adalah komunitas yang mendokumentasikan sejarah dan budaya Luwu.</p>
     </section>
 
-    <section id="events" data-aos="fade-left">
+    <section id="events">
         <h2>Acara Mendatang</h2>
         <ul>
-            <li>📜 Seminar Sejarah Luwu - 10 April 2025</li>
-            <li>🏛️ Ekspedisi Budaya - 20 Mei 2025</li>
+            <li>📜 Seminar Sejarah - 10 April</li>
+            <li>🏛️ Ekspedisi Budaya - 20 Mei</li>
         </ul>
     </section>
 
-    <section id="upload" data-aos="zoom-in">
+    <section id="upload">
         <h2>Upload Artikel</h2>
         <form id="articleForm">
-            <input type="text" id="title" placeholder="Judul Artikel" required><br>
-            <textarea id="content" placeholder="Isi Artikel" required></textarea><br>
-            <input type="file" id="imageUpload" accept="image/*"><br>
+            <input type="text" id="title" placeholder="Judul Artikel" required>
+            <textarea id="content" placeholder="Isi Artikel" required></textarea>
+            <input type="file" id="imageUpload" accept="image/*">
             <button type="submit">Unggah</button>
         </form>
     </section>
 
-    <section id="articles" data-aos="fade-up">
+    <section id="articles">
         <h2>Artikel Terbaru</h2>
         <div id="articleList"></div>
     </section>
 
-    <section id="contact" data-aos="fade-down">
+    <section id="contact">
         <h2>Hubungi Kami</h2>
-        <p>Email: peapugalu7@gmail.com</p>
+        <p>Email: info@peapugalu.com</p>
     </section>
 
+    <button id="scrollToTop">⬆️</button>
+
     <footer>
-        <p>&copy; 2025 Pea Pugalu. Semua Hak Dilindungi.</p>
+        <p>&copy; 2025 Pea Pugalu.</p>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 </html>
