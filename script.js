@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Website Pea Pugalu siap!");
 
-    // Smooth scrolling untuk navigasi
+    // Smooth scroll
     document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Fungsi menampilkan artikel dari localStorage
+    // Menampilkan artikel dari localStorage
     function loadArticles() {
         const articleList = document.getElementById("articleList");
         articleList.innerHTML = "";
         const articles = JSON.parse(localStorage.getItem("articles")) || [];
-        
+
         articles.forEach((article, index) => {
             const articleDiv = document.createElement("div");
             articleDiv.classList.add("article");
@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 <h3>${article.title}</h3>
                 <p>${article.content}</p>
                 ${article.image ? `<img src="${article.image}" alt="Gambar Artikel">` : ""}
-                <br>
                 <button class="delete-btn" onclick="deleteArticle(${index})">Hapus</button>
             `;
             articleList.appendChild(articleDiv);
@@ -34,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     loadArticles();
 
-    // Fungsi upload artikel dengan gambar
+    // Upload Artikel
     document.getElementById("articleForm").addEventListener("submit", function (e) {
         e.preventDefault();
 
@@ -42,23 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const content = document.getElementById("content").value;
         const imageUpload = document.getElementById("imageUpload").files[0];
 
-        if (title && content) {
-            const newArticle = { title, content };
+        const newArticle = { title, content };
 
-            if (imageUpload) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    newArticle.image = e.target.result;
-                    saveArticle(newArticle);
-                };
-                reader.readAsDataURL(imageUpload);
-            } else {
+        if (imageUpload) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                newArticle.image = e.target.result;
                 saveArticle(newArticle);
-            }
-
-            document.getElementById("title").value = "";
-            document.getElementById("content").value = "";
-            document.getElementById("imageUpload").value = "";
+            };
+            reader.readAsDataURL(imageUpload);
+        } else {
+            saveArticle(newArticle);
         }
     });
 
