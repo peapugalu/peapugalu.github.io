@@ -31,14 +31,6 @@ body {
     left: 0;
 }
 
-#hero h1 {
-    font-size: 50px;
-}
-
-#hero p {
-    font-size: 18px;
-}
-
 .btn {
     padding: 15px 30px;
     margin-top: 20px;
@@ -47,10 +39,6 @@ body {
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
-}
-
-.btn:hover {
-    background: #e68900;
 }
 
 header {
