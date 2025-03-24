@@ -1,0 +1,41 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Warna */
+:root {
+    --primary: #000000;
+    --secondary: #FFD700;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B0B0;
+}
+
+/* Body */
+body {
+    background: url('images/kedatuan.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid var(--secondary);
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 2px solid var(--secondary);
+    color: var(--text-secondary);
+}
