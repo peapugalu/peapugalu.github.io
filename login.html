@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Peapugalu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Peapugalu</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="artikel.html">Artikel</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="login.html">Masuk</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="login">
+        <h2>Masuk ke Peapugalu</h2>
+        <form onsubmit="login(); return false;">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Masuk</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Peapugalu - Komunitas Sejarah Luwu</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
