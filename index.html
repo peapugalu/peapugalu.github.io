@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <h1>Pea Pugalu</h1>
         <nav>
@@ -14,6 +15,7 @@
                 <li><a href="#home">Beranda</a></li>
                 <li><a href="#about">Tentang</a></li>
                 <li><a href="#events">Acara</a></li>
+                <li><a href="#upload">Upload Artikel</a></li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
         </nav>
@@ -32,14 +34,28 @@
     <section id="events">
         <h2>Acara Mendatang</h2>
         <ul>
-            <li>Seminar Sejarah Luwu - 10 April 2025</li>
-            <li>Ekspedisi Budaya - 20 Mei 2025</li>
+            <li>📜 Seminar Sejarah Luwu - 10 April 2025</li>
+            <li>🏛️ Ekspedisi Budaya - 20 Mei 2025</li>
         </ul>
+    </section>
+
+    <section id="upload">
+        <h2>Upload Artikel</h2>
+        <form id="articleForm">
+            <input type="text" id="title" placeholder="Judul Artikel" required><br>
+            <textarea id="content" placeholder="Isi Artikel" required></textarea><br>
+            <button type="submit">Unggah</button>
+        </form>
+    </section>
+
+    <section id="articles">
+        <h2>Artikel Terbaru</h2>
+        <div id="articleList"></div>
     </section>
 
     <section id="contact">
         <h2>Hubungi Kami</h2>
-        <p>Email: peapugalu7@gmail.com</p>
+        <p>Email: info@peapugalu.com</p>
     </section>
 
     <footer>
