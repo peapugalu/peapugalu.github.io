@@ -1,13 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => { document.getElementById("loader").style.display = "none"; }, 1000);
 
-    document.querySelectorAll("nav ul li a").forEach(e => {
-        e.addEventListener("click", t => {
-            t.preventDefault();
-            document.getElementById(e.getAttribute("href").substring(1)).scrollIntoView({ behavior: "smooth" });
-        });
-    });
-
     let scrollToTopBtn = document.getElementById("scrollToTop");
     window.addEventListener("scroll", () => {
         window.scrollY > 200 ? scrollToTopBtn.style.display = "block" : scrollToTopBtn.style.display = "none";
@@ -38,17 +31,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loadArticles();
 
-    document.getElementById("articleForm").addEventListener("submit", (e) => {
+    document.getElementById("articleForm").addEventListener("submit", function(e) {
         e.preventDefault();
+
         let title = document.getElementById("title").value;
         let content = document.getElementById("content").value;
         let imageUpload = document.getElementById("imageUpload").files[0];
+
+        if (!title || !content) {
+            alert("Judul dan isi artikel harus diisi!");
+            return;
+        }
+
         let newArticle = { title, content };
 
         if (imageUpload) {
             let reader = new FileReader();
-            reader.onload = function (e) {
-                newArticle.image = e.target.result;
+            reader.onload = function(event) {
+                newArticle.image = event.target.result;
                 saveArticle(newArticle);
             };
             reader.readAsDataURL(imageUpload);
