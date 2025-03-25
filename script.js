@@ -3846,6 +3846,7 @@ function login() {
     }
 }
 
+// Tambah Komentar
 function addComment() {
     let commentText = document.getElementById("commentText").value;
     let imageUpload = document.getElementById("imageUpload").files[0];
@@ -3878,3 +3879,38 @@ function addComment() {
     document.getElementById("commentText").value = "";
     document.getElementById("imageUpload").value = "";
 }
+
+// Tambah Postingan Baru
+function addPost() {
+    let postTitle = document.getElementById("postTitle").value;
+    let postContent = document.getElementById("postContent").value;
+    let forumContainer = document.getElementById("forumContainer");
+
+    if (postTitle.trim() === "" || postContent.trim() === "") {
+        alert("Judul dan isi postingan harus diisi!");
+        return;
+    }
+
+    let postDiv = document.createElement("div");
+    postDiv.classList.add("post");
+
+    let titleElement = document.createElement("h3");
+    titleElement.innerText = postTitle;
+    postDiv.appendChild(titleElement);
+
+    let contentElement = document.createElement("p");
+    contentElement.innerText = postContent;
+    postDiv.appendChild(contentElement);
+
+    let commentSection = document.createElement("div");
+    commentSection.classList.add("comments");
+    commentSection.innerHTML = `<h4>Komentar:</h4><div class="comment-box"></div>`;
+    postDiv.appendChild(commentSection);
+
+    forumContainer.appendChild(postDiv);
+
+    // Reset input
+    document.getElementById("postTitle").value = "";
+    document.getElementById("postContent").value = "";
+}
+
