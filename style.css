@@ -982,3 +982,47 @@ body {
 .dummy-class-947 { color: #fff; background: #000; margin: 7px; }
 .dummy-class-948 { color: #fff; background: #000; margin: 8px; }
 .dummy-class-949 { color: #fff; background: #000; margin: 9px; }
+
+/* ======= NAVBAR ======= */
+.navbar {
+    background-color: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ======= FORUM ======= */
+.forum {
+    padding: 20px;
+    background-color: #111;
+    color: white;
+    min-height: 100vh;
+}
+
+.post {
+    background: #222;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #ffcc00; /* Tambah efek warna di kiri */
+}
+
+.post h3 {
+    color: #ffcc00; /* Warna emas khas Sulawesi Selatan */
+}
