@@ -3826,3 +3826,22 @@ function dummyFunction948() {
 function dummyFunction949() {
     console.log("Ini adalah fungsi dummy ke-949");
 }
+
+function login() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    let users = [
+        { username: "admin", password: "1234" },
+        { username: "user", password: "password" }
+    ];
+
+    let user = users.find(u => u.username === username && u.password === password);
+    
+    if (user) {
+        alert("Login berhasil! Anda akan dialihkan ke beranda.");
+        window.location.href = "index.html"; // Redirect ke halaman utama
+    } else {
+        alert("Username atau password salah!");
+    }
+}
