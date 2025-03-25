@@ -23,10 +23,17 @@
     <!-- Galeri Section -->
     <section class="galeri">
         <h2>Galeri Sejarah Luwu</h2>
-        <div class="gallery-container">
+        <div class="gallery-container" id="galleryContainer">
             <img src="images/istana_luwu.jpg" alt="Istana Kedatuan Luwu">
             <img src="images/pahlawan_luwu.jpg" alt="Pahlawan Luwu">
             <img src="images/tradisi_luwu.jpg" alt="Tradisi Luwu">
+        </div>
+
+        <!-- Form Upload Gambar -->
+        <div class="upload-container">
+            <h3>Tambah Foto ke Galeri</h3>
+            <input type="file" id="uploadImage" accept="image/*">
+            <button onclick="addImage()">Unggah Gambar</button>
         </div>
     </section>
 
