@@ -1073,3 +1073,32 @@ body {
     border: none;
     cursor: pointer;
 }
+
+/* ======= GALERI ======= */
+.galeri {
+    padding: 20px;
+    background-color: #111;
+    color: white;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-container img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    border: 3px solid #ffcc00;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
