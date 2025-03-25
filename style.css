@@ -1026,3 +1026,50 @@ body {
 .post h3 {
     color: #ffcc00; /* Warna emas khas Sulawesi Selatan */
 }
+
+/* ======= ARTIKEL ======= */
+.artikel {
+    padding: 20px;
+    background-color: #111;
+    color: white;
+    min-height: 100vh;
+}
+
+.article {
+    background: #222;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #ffcc00;
+}
+
+.article img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.add-article {
+    margin-top: 20px;
+    padding: 20px;
+    background: #222;
+    border-radius: 5px;
+}
+
+.add-article input, .add-article textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.add-article button {
+    background: #ffcc00;
+    color: black;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
