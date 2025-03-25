@@ -3914,3 +3914,42 @@ function addPost() {
     document.getElementById("postContent").value = "";
 }
 
+// Fungsi Menambahkan Artikel Baru dengan Foto
+function addArticle() {
+    let articleTitle = document.getElementById("articleTitle").value;
+    let articleContent = document.getElementById("articleContent").value;
+    let articleImage = document.getElementById("articleImage").files[0];
+    let articleContainer = document.getElementById("articleContainer");
+
+    if (articleTitle.trim() === "" || articleContent.trim() === "") {
+        alert("Judul dan isi artikel tidak boleh kosong!");
+        return;
+    }
+
+    let articleDiv = document.createElement("div");
+    articleDiv.classList.add("article");
+
+    let titleElement = document.createElement("h3");
+    titleElement.innerText = articleTitle;
+    articleDiv.appendChild(titleElement);
+
+    let contentElement = document.createElement("p");
+    contentElement.innerText = articleContent;
+    articleDiv.appendChild(contentElement);
+
+    if (articleImage) {
+        let imageElement = document.createElement("img");
+        imageElement.src = URL.createObjectURL(articleImage);
+        imageElement.style.maxWidth = "100%";
+        imageElement.style.borderRadius = "5px";
+        imageElement.style.marginTop = "10px";
+        articleDiv.appendChild(imageElement);
+    }
+
+    articleContainer.appendChild(articleDiv);
+
+    // Reset Input
+    document.getElementById("articleTitle").value = "";
+    document.getElementById("articleContent").value = "";
+    document.getElementById("articleImage").value = "";
+}
