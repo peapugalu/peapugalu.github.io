@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Diskusi Peapugalu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Peapugalu</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="artikel.html">Artikel</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="login.html">Masuk</a></li>
+        </ul>
+    </nav>
+
+    <!-- Forum Section -->
+    <section class="forum">
+        <h2>Forum Diskusi</h2>
+        <div class="forum-container">
+            <div class="post">
+                <h3>Sejarah Kerajaan Luwu</h3>
+                <p>Ayo diskusikan sejarah Kerajaan Luwu di sini!</p>
+            </div>
+
+            <!-- Form untuk komentar dan unggah foto -->
+            <div class="comment-section">
+                <h3>Tambahkan Komentar</h3>
+                <textarea id="commentText" placeholder="Tulis komentar..."></textarea>
+                <input type="file" id="imageUpload" accept="image/*">
+                <button onclick="addComment()">Kirim</button>
+            </div>
+
+            <!-- Tempat menampilkan komentar -->
+            <div id="commentsContainer"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Peapugalu - Komunitas Sejarah Luwu</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
