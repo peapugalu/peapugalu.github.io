@@ -22,24 +22,39 @@
 
     <!-- Forum Section -->
     <section class="forum">
-        <h2>Forum Diskusi</h2>
-        <div class="forum-container">
+        <h2>Forum Diskusi Peapugalu</h2>
+
+        <!-- Postingan Forum -->
+        <div id="forumContainer">
             <div class="post">
                 <h3>Sejarah Kerajaan Luwu</h3>
                 <p>Ayo diskusikan sejarah Kerajaan Luwu di sini!</p>
+                <div class="comments">
+                    <h4>Komentar:</h4>
+                    <div class="comment-box"></div>
+                </div>
             </div>
-
-            <!-- Form untuk komentar dan unggah foto -->
-            <div class="comment-section">
-                <h3>Tambahkan Komentar</h3>
-                <textarea id="commentText" placeholder="Tulis komentar..."></textarea>
-                <input type="file" id="imageUpload" accept="image/*">
-                <button onclick="addComment()">Kirim</button>
-            </div>
-
-            <!-- Tempat menampilkan komentar -->
-            <div id="commentsContainer"></div>
         </div>
+
+        <!-- Tambahkan Postingan -->
+        <div class="add-post">
+            <h3>Buat Postingan Baru</h3>
+            <input type="text" id="postTitle" placeholder="Judul Postingan">
+            <textarea id="postContent" placeholder="Tulis isi postingan..."></textarea>
+            <button onclick="addPost()">Kirim Postingan</button>
+        </div>
+
+        <!-- Form Komentar -->
+        <div class="comment-section">
+            <h3>Tambahkan Komentar</h3>
+            <textarea id="commentText" placeholder="Tulis komentar..."></textarea>
+            <input type="file" id="imageUpload" accept="image/*">
+            <button onclick="addComment()">Kirim</button>
+        </div>
+
+        <!-- Tempat menampilkan komentar -->
+        <div id="commentsContainer"></div>
+
     </section>
 
     <footer class="footer">
