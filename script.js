@@ -3953,3 +3953,27 @@ function addArticle() {
     document.getElementById("articleContent").value = "";
     document.getElementById("articleImage").value = "";
 }
+
+// Fungsi untuk menambahkan gambar ke galeri
+function addImage() {
+    let uploadImage = document.getElementById("uploadImage").files[0];
+    let galleryContainer = document.getElementById("galleryContainer");
+
+    if (!uploadImage) {
+        alert("Silakan pilih gambar terlebih dahulu!");
+        return;
+    }
+
+    let imageElement = document.createElement("img");
+    imageElement.src = URL.createObjectURL(uploadImage);
+    imageElement.alt = "Gambar Baru";
+    imageElement.style.maxWidth = "300px";
+    imageElement.style.borderRadius = "5px";
+    imageElement.style.border = "3px solid #ffcc00";
+    imageElement.style.margin = "10px";
+
+    galleryContainer.appendChild(imageElement);
+
+    // Reset input file setelah mengunggah
+    document.getElementById("uploadImage").value = "";
+}
