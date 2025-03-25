@@ -3845,3 +3845,36 @@ function login() {
         alert("Username atau password salah!");
     }
 }
+
+function addComment() {
+    let commentText = document.getElementById("commentText").value;
+    let imageUpload = document.getElementById("imageUpload").files[0];
+    let commentsContainer = document.getElementById("commentsContainer");
+
+    if (commentText.trim() === "" && !imageUpload) {
+        alert("Komentar tidak boleh kosong!");
+        return;
+    }
+
+    let commentDiv = document.createElement("div");
+    commentDiv.classList.add("comment");
+
+    let textPara = document.createElement("p");
+    textPara.innerText = commentText;
+    commentDiv.appendChild(textPara);
+
+    if (imageUpload) {
+        let imageElement = document.createElement("img");
+        imageElement.src = URL.createObjectURL(imageUpload);
+        imageElement.style.maxWidth = "200px";
+        imageElement.style.display = "block";
+        imageElement.style.marginTop = "10px";
+        commentDiv.appendChild(imageElement);
+    }
+
+    commentsContainer.appendChild(commentDiv);
+
+    // Reset input
+    document.getElementById("commentText").value = "";
+    document.getElementById("imageUpload").value = "";
+}
